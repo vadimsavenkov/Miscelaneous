@@ -5,15 +5,22 @@ def main():
     import pandas as pd
     import matplotlib.pyplot as plt
     
-    #dataset = pd.read_csv('LRdata.csv', sep=";",index_col=0, decimal=",")
-    #print(dataset)
+    dataset = pd.read_csv('LRdata.csv') #, sep=";",index_col=0, decimal=",")
+    print(dataset)
     
     #dataset = pd.DataFrame(dataset,columns=['Age', 'Salary (k$)', 'Purchased'])
+    #print(dataset)
+    
+    #x = dataset.iloc[:, 0:3].values
+    #y = dataset.iloc[:, -1].values
+    #print(dataset)
     #dataset = dataset.notnull()
     #dataset = dataset.astype('int64')
     
     #print(dataset)
-    dataset = pd.read_csv('Purchase-Data.csv')
+    dataset = pd.read_csv('Purchase-Data.csv', names=["Age", "Salary", "Purchased"])
+    
+    print(dataset)
     
     x_columns = 2
     x = dataset.iloc[:, 0:x_columns].values

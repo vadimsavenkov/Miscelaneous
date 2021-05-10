@@ -26,7 +26,7 @@ class MinimumBalanceAccount(BankAccount):
         BankAccount.withdraw(self,_amount)
       
       else:    
-          print("Warning! Minimum balance must be maitained")
+          print("Warning! Minimum balance must be maitained!")
             
 def main():
     account1 = MinimumBalanceAccount(5000)

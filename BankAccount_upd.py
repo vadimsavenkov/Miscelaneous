@@ -6,7 +6,7 @@ class BankAccount:
     def withdraw(self, _amount):
       if (self.balance>=_amount):  
         self.balance=self.balance- _amount
-        print("Withdrawal completed successfully")
+        print("Withdrawal was completed successfully")
 
     def deposit(self, _amount):
       if (_amount>0):  
@@ -26,7 +26,7 @@ class MinimumBalanceAccount(BankAccount):
         BankAccount.withdraw(self,_amount)
       
       else:    
-          print("Sorry,minimum balance must be maitained")
+          print("Warning! Minimum balance must be maitained")
             
 def main():
     account1 = MinimumBalanceAccount(5000)
